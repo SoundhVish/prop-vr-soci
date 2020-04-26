@@ -1,0 +1,749 @@
+<!--<!DOCTYPE html>-->
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:url"           content="https://vishali10.github.io/ScaleVR/index.html" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Your Website Title" />
+    <meta property="og:description"   content="New descriptionn" />
+    <meta property="og:image"         content="https://firebasestorage.googleapis.com/v0/b/socio-8c7cf.appspot.com/o/images%2Fphoto-1552288092-76e7d732366c.jpg?alt=media&token=f8b6c6fb-b2cd-4f29-b56a-9d8c26d31f7b" />
+    
+    
+    
+    <title>Demo Social</title>
+    <!-- Stylesheets
+    ================================================= -->
+    <link rel="stylesheet" href="public/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="public/css/style.css" />
+    <link rel="stylesheet" href="public/css/ionicons.min.css" />
+    <link rel="stylesheet" href="public/css/font-awesome.min.css" />
+    <link href="public/css/emoji.css" rel="stylesheet" />
+
+    <!--Google Font-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!--Favicon-->
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://cdn.glitch.com/bc403f72-b5d3-43ec-ad72-74f21c0382f6%2Ffavicon.png?v=1585058964135"
+    />
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your share button code -->
+  
+    <style>
+      html.a-fullscreen .a-canvas {
+        position: relative !important;
+      }
+      html.a-fullscreen {
+        position: relative !important;
+      }
+      html.a-fullscreen body {
+        overflow: auto !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header
+    ================================================= -->
+    <header id="header">
+      <nav class="navbar navbar-default navbar-fixed-top menu">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://www.propvr.in/"
+              ><img
+                src="https://cdn.glitch.com/bc403f72-b5d3-43ec-ad72-74f21c0382f6%2Flogo-black3.png?v=1585059218361"
+                alt="logo"
+            /></a>
+          </div>
+
+          <div
+            class="collapse navbar-collapse"
+            id="bs-example-navbar-collapse-1"
+          >
+            <ul class="nav navbar-nav navbar-right main-menu">
+              <li class="dropdown">
+                <a
+                  href="#"
+                  class="dropdown-toggle"
+                  data-toggle="dropdown"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  active
+                  >Profile
+                </a>
+              </li>
+
+              <li class="dropdown">
+                <a
+                  href="https://www.propvr.in/"
+                  class="dropdown-toggle pages"
+                  data-toggle="dropdown"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Home
+                </a>
+              </li>
+              <li class="dropdown"><a href="#contactsec"> Contact</a></li>
+              <button class="btn btn-primary" style="top:10px;" id="logout">
+                Logout
+              </button>
+              <button class="btn btn-primary" style="top:10px;" id="loginbtn" data-target="#loginmodal" data-toggle="modal">
+                Login
+              </button>
+            </ul>
+            <form class="navbar-form navbar-right hidden-sm">
+              <div class="form-group">
+                <i class="icon ion-android-search"></i>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search friends, photos, videos"
+                />
+              </div>
+            </form>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+      </nav>
+    </header>
+    <!--Header End-->
+   
+    
+    
+    <div id="page-contents">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 static">
+            <div class="profile-card">
+              <center>
+                <img
+                  src="https://cdn.glitch.com/5b2766b5-a31c-44f2-aa07-0b9a781ec4b2%2Fuser-1.jpg?v=1586498385153"
+                  alt="user"
+                  class="profile-photo"
+                />
+              </center>
+              <h5
+                style="
+    text-align: center;"
+              >
+                <a
+                  href="friend-finder/timeline.html"
+                  class="text-white"
+                  style="
+    font-size: 30px;"
+                  >User Name</a
+                >
+              </h5>
+              <h5
+                style="
+    text-align: center;"
+              >
+                <a
+                  href="#"
+                  class="text-white"
+                  style="text-align: center;font-size: 13px "
+                  >Google 360 * Photographer | VR360* Documentary Maker</a
+                >
+              </h5>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="media">
+              <div
+                id="img_div"
+                class="row js-masonry"
+                data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "percentPosition": true }'
+              >
+                <!--<div class="grid-sizer col-md-4 col-sm-4"></div>-->
+              </div>
+            </div>
+          </div>
+          <!-- Newsfeed Common Side Bar Right
+          ================================================= -->
+        </div>
+      </div>
+    </div>
+
+    <!--MODAL
+    =========================================== -->
+    <div id="signupmodal" class="modal fade" role="dialog">
+      <div class="modal-dialog " role="content">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modaltitle">Register with Us</h4>
+          </div>
+          <div class="modal-body">
+            <form id="form" name="form" class="form" novalidate>
+              <div class="form-group">
+                <div class="icon2">
+                  <i class="fa fa-envelope" style="paddding-right:2px;"></i>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="form21"
+                  placeholder=" Enter email"
+                />
+              </div>
+              <div class="form-group">
+                <div class="icon2">
+                  <i class="fa fa-user"></i>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="form2111"
+                  placeholder=" Enter Username"
+                />
+              </div>
+              <div class="form-group">
+                <div class="icon2">
+                  <i class="fa fa-lock"></i>
+                </div>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="form11"
+                  placeholder=" Password"
+                />
+              </div>
+              <div class="form-group">
+                <div class="icon2">
+                  <i class="fa fa-lock"></i>
+                </div>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="cpass"
+                  placeholder=" Retype Password"
+                />
+              </div>
+              <p id="errormsg1" style="color:red; font-size:12px;"></p>
+              <div class="already">
+                <a
+                  data-toggle="modal"
+                  data-target="#loginmodal"
+                  data-dismiss="modal"
+                  style="cursor:pointer;"
+                  id="alrdy"
+                  >Already have an account?</a
+                >
+              </div>
+              <button id="signup" class="btn btn-block">
+                <i class="fa fa-key"></i> Register
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="loginmodal" class="modal fade" role="dialog">
+      <div class="modal-dialog" role="content">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modaltitle">Welcome Back!</h4>
+          </div>
+          <div class="modal-body">
+            <form id="login_form" class="login_form" novalidate>
+              <div class="form-group">
+                <div class="icon2">
+                  <i class="fa fa-user"></i>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="form211"
+                  placeholder=" Enter email"
+                />
+              </div>
+              <div class="form-group">
+                <div class="icon2">
+                  <i class="fa fa-lock"></i>
+                </div>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="form111"
+                  placeholder=" Password"
+                />
+              </div>
+              <p id="errormsg" style="color:red; font-size:12px;"></p>
+              <div class="already">
+                <a href="#" style="cursor:pointer;">Forgot Password?</a>
+              </div>
+              <div class="create">
+                <a
+                  data-toggle="modal"
+                  data-target="#signupmodal"
+                  data-dismiss="modal"
+                  style="cursor:pointer;"
+                  id="create"
+                  >Create an account?</a
+                >
+              </div>
+              <button id="login" class="btn btn-block">
+                <i class="fa fa-sign-in"></i> Login
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Footer
+    ================================================= -->
+    <footer id="footer">
+      <div class="container" id="contactsec">
+        <div class="row">
+          <div class="footer-wrapper">
+            <div class="col-md-3 col-sm-3">
+              <a href="https://www.propvr.in/"
+                ><img
+                  src="https://cdn.glitch.com/bc403f72-b5d3-43ec-ad72-74f21c0382f6%2Flogo-black3.png?v=1585059218361"
+                  alt=""
+                  class="footer-logo"
+              /></a>
+              <ul class="list-inline social-icons">
+                <li>
+                  <a href="#"><i class="icon ion-social-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="icon ion-social-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="icon ion-social-googleplus"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="icon ion-social-pinterest"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="icon ion-social-linkedin"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-2 col-sm-2">
+              <h5>For individuals</h5>
+              <ul class="footer-links">
+                <li><a href="https://propvr.tech/signup.html">Signup</a></li>
+                <li><a href="https://propvr.tech/signup.html">login</a></li>
+                <li><a href="https://www.propvr.in/">Explore</a></li>
+              </ul>
+            </div>
+
+            <div class="col-md-2 col-sm-2">
+              <h5>About</h5>
+              <ul class="footer-links">
+                <li><a href="https://www.propvr.in/about">About us</a></li>
+                <li>
+                  <a href="https://www.propvr.in/contact-us">Contact us</a>
+                </li>
+                <li>
+                  <a href="https://www.propvr.in/termsandconditions">Terms</a>
+                </li>
+                <li><a href="https://www.propvr.in/">Help</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-sm-3">
+              <h5>Contact Us</h5>
+              <ul class="contact">
+                <li>
+                  <i class="icon ion-ios-telephone-outline"></i>+1 (234) 222
+                  0754
+                </li>
+                <li>
+                  <i class="icon ion-ios-email-outline"></i
+                  >info@thunder-team.com
+                </li>
+                <li>
+                  <i class="icon ion-ios-location-outline"></i>228 Park Ave S
+                  NY, USA
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright © 2019 Touchwizard Technologies. All rights reserved</p>
+      </div>
+    </footer>
+    <!--preloader-->
+    <div id="spinner-wrapper">
+      <div class="spinner"></div>
+    </div>
+    <!--Buy button-->
+    <!-- Scripts
+    ================================================= -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-storage.js"></script>
+
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyBFxRtxrD3jM6WfLSVksicZGadFgUQ9tVM",
+        authDomain: "socio-8c7cf.firebaseapp.com",
+        databaseURL: "https://socio-8c7cf.firebaseio.com",
+        projectId: "socio-8c7cf",
+        storageBucket: "socio-8c7cf.appspot.com",
+        messagingSenderId: "971172228538",
+        appId: "1:971172228538:web:0729d10ad3b47df8748183"
+      };
+
+      firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+      const db = firebase.database();
+    </script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+  <script src="public/js/jquery-3.1.1.min.js"></script>
+  <script src="script.js"></script>
+  <script src="public/js/bootstrap.min.js"></script>
+  <script src="public/js/masonry.pkgd.min.js"></script>
+  <script src="public/js/jquery.sticky-kit.min.js"></script>
+  <script src="public/js/jquery.scrollbar.min.js"></script>
+  <script src="public/js/script.js"></script>
+
+    <script type="text/javascript" src="auth.js"></script>
+
+    <script>
+      
+
+
+      var ref = firebase.database().ref("/registeredusers");
+      ref.once("value", function(snap) {
+        console.log(snap.val());
+        snap.forEach(snap1 => {
+          var ref1 = firebase
+            .database()
+            .ref("registeredusers/" + snap1.key + "/images");
+          ref1.once("value", function(snap2) {
+         
+            
+            snap2.forEach(snap3 => {
+              var ref2 = firebase
+                .database()
+                .ref(
+                  "registeredusers/" +
+                    snap1.key +
+                    "/images/" +
+                    snap3.key +
+                    "/Likes"
+                );
+          
+              
+              ref2.once("value", function(snap4) {
+                
+                document.getElementById("img_div").innerHTML +=
+                  ` <div class="grid-item col-md-4 col-sm-4 col-xs-12">
+                  <div class="media-grid">
+                    <div
+                      
+                      class="img-wrapper "
+                      data-toggle="modal"
+                      data-target="#myMod"
+                      onclick="sendimg(this)";
+                    >
+                      <img
+                        src="` +
+                  snap3.val().img_url +
+                  `"
+                        alt=""
+                        class=" post-image" id="img_src" style="height:200px"
+                      />
+                    <p class="text-overlay">
+                        CLICK FOR INTERACTIVE 360&#176; VIEW
+                      </p>
+                    </div>
+                    <div class="media-info">
+                      <div class="reaction">
+                        <a class="btn text-green"
+                          ><label class="like-checkbox"><input type="checkbox" id="likecheck" class="hidden"><i class="fa fa-thumbs-up unchecked" onclick ="trigger('` +
+                  snap1.key +
+                  `','` +
+                  snap3.key +
+                  `')"></i><i class="fa fa-thumbs-up checked"></i></input><span id="` +
+                  snap3.key +
+                  `">` +
+                  snap4.numChildren() +
+                  `</span> </label></a
+                        >
+
+                <span type="button" data-toggle="modal" data-target="#shareModal"
+            ><i class="fa fa-share"> </i> <i class="samp"></i></span
+          >
+
+                              </div>
+             </div>
+                  </div>
+                  <!--Popup-->
+                  <div
+                   id="myMod"
+                    class="modal fade modal-1"
+                    tabindex="-1"
+                    role="dialog"
+                    aria-hidden="true"
+                  >
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="post-content">
+                          <div>
+                            <a-scene id="sam" assetloaded>
+                              <a-assets>
+                                <img id="img_asset" crossorigin="anonymous" />
+                                <p class="text-overlay">
+                                  CLICK & DRAG TO LOOK AROUND
+                                </p>
+                              </a-assets>
+                              <a-sky id="sky_img"></a-sky>
+                            </a-scene>
+                          </div>
+
+                          <div class="post-container">
+                            <img
+                              src="https://cdn.glitch.com/5b2766b5-a31c-44f2-aa07-0b9a781ec4b2%2Fuser-5.jpg?v=1586500770266"
+                              alt="user"
+                              class="profile-photo-md pull-left"
+                              id="img"
+                            />
+                            <div class="post-detail">
+                              <div class="user-info">
+                                <h5>
+                                  <a
+                                    href="friend-finder/timeline.html"
+                                    class="profile-link"
+                                    >Alexis Clark</a
+                                  >
+                                  <span class="following"></span>
+                                </h5>
+                                <p class="text-muted">
+                                  
+                                </p>
+                              </div>
+                              
+                              <div class="line-divider"></div>
+                              <div class="post-text">
+                                <p>
+                                  Lorem ipsum dolor sit amet, consectetur
+                                  adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua.
+                                  Ut enim ad minim veniam, quis nostrud
+                                  exercitation ullamco laboris nisi ut aliquip
+                                  ex ea commodo consequat. Duis aute irure dolor
+                                  in reprehenderit in voluptate velit esse
+                                  cillum dolore eu fugiat nulla pariatur.
+                                  Excepteur sint occaecat cupidatat non
+                                  proident, sunt in culpa qui officia deserunt
+                                  mollit anim id est laborum.
+                                  <i class="em em-anguished"></i>
+                                  <i class="em em-anguished"></i>
+                                  <i class="em em-anguished"></i>
+                                </p>
+                              </div>
+                              <div class="line-divider"></div>
+    															<div class="post-comment" >
+    																<table id="comments">
+                                      <tbody>
+                                      </tbody>
+                                    </table>
+    											
+    															</div>
+                              <div class="post-comment">
+                                <img
+                                  src="https://cdn.glitch.com/5b2766b5-a31c-44f2-aa07-0b9a781ec4b2%2Fuser-1.jpg?v=1586498385153"
+                                  alt=""
+                                  class="profile-photo-sm"
+                                />
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  placeholder="Post a comment"
+                                  id="com"
+                                />
+
+                                <button class="btn btn-primary"  id="postbtn" onclick ="post('` +
+                  snap1.key +
+                  `','` +
+                  snap3.key +
+                  `')">
+                                  Post
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                    <!--Popup End-->
+                  </div>
+                </div>
+              `;
+              });
+            });
+          });
+        });
+      });
+      
+     
+
+      function sendimg(e) {
+        document.getElementById("img_asset").src =
+          e.childNodes[0].nextElementSibling.src;
+        var sky = document.getElementById("sky_img");
+        sky.setAttribute("material", "src", "#img_asset");
+        // sky.setAttribute("material", "rotation", "0 -130 0");
+      }
+    </script>
+    <script>
+      var ref = firebase.database().ref("/registeredusers");
+      ref.once("value", function(snap) {
+        console.log(snap.val());
+        snap.forEach(snap1 => {
+          var ref1 = firebase
+            .database()
+            .ref("registeredusers/" + snap1.key + "/images");
+          ref1.once("value", function(snap2) {
+            snap2.forEach(snap3 => {
+              var ref2 = firebase
+                .database()
+                .ref(
+                  "registeredusers/" +
+                    snap1.key +
+                    "/images/" +
+                    snap3.key +
+                    "/Comments/"
+                );
+
+              ref2.on("child_added", snap4 => {
+                var name = snap4.child("name").val();
+                var com = snap4.child("comment").val();
+                document.getElementById("comments").innerHTML +=
+                  `<tr><td>
+<p><a class="profile-link">` +
+                  name +
+                  `</a>&nbsp&nbsp` +
+                  com +
+                  `</p></td></tr>`;
+              });
+            });
+          });
+        });
+      });
+    </script>
+    
+          <div
+            class="modal"
+            id="shareModal"
+            tabindex="-1"
+            role="dialog"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="shareModalLabel">
+                    Share Post
+                  </h5>
+                  
+                </div>
+                <div class="modal-body">
+                  <center>
+                    <button
+                      id="export"
+                      type="button"
+                      class="btn btn-secondary btn-centered"
+                      onclick="location.href = 'https://propvr.tech/signup.html';"
+                    >
+                      Export &lt; / &gt;
+                      <p style="color:white; font-size:10px;">
+                        Customize, add custom branding <br />and export link or
+                        embed code
+                      </p>
+                    </button>
+                  </center>
+
+                  <hr />
+                  <div class="btn-group icons">
+                    <img
+                      src="https://cdn.glitch.com/bc403f72-b5d3-43ec-ad72-74f21c0382f6%2Ffacebook.svg?v=1585509294430"
+                      class="fb"
+                    />
+                    <img
+                      src="https://cdn.glitch.com/bc403f72-b5d3-43ec-ad72-74f21c0382f6%2Finstagram.svg?v=1585509469508"
+                      class="inst"
+                    />
+                    <img
+                      src="https://cdn.glitch.com/bc403f72-b5d3-43ec-ad72-74f21c0382f6%2Ftwitter.svg?v=1585509689752"
+                      class="twit"
+                    />
+                  </div>
+                  <hr />
+                  <center>
+                    <button
+                      onclick="myFunction()"
+                      data-toggle="tooltip2"
+                      title="Click to obtain link"
+                      class="btn btn-dark"
+                    >
+                      Use your own domain?
+                    </button>
+                  </center>
+                  <input
+                    id="demo1"
+                    type="url"
+                    onclick="myFunction()"
+                    data-toggle="tooltip1"
+                    title="Copy and use this link"
+                  />
+                  <div class="tooltips">
+                    <i
+                      class="fa fa-clipboard fa-2x"
+                      style="color:#1FDEDE;margin-bottom:20px;"
+                      onclick="Function1()"
+                      onmouseout="outFunc()"
+                    >
+                      <span class="tooltiptext" id="myTooltip"
+                        >Click to Copy</span
+                      >
+                    </i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  </body>
+</html>
+
