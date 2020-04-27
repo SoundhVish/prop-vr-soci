@@ -1,10 +1,5 @@
 "use strict";
- function share() {
-			
-		console.log("inside function share");
-      var x=document.getElementByProperty("og:image");
-      x.setAttribute("content","https://firebasestorage.googleapis.com/v0/b/socio-8c7cf.appspot.com/o/images%2Fphoto-1552288092-76e7d732366c.jpg?alt=media&token=f8b6c6fb-b2cd-4f29-b56a-9d8c26d31f7b");
-      }
+
 
 const storage = firebase.storage();
 var storageRef = storage.ref();
