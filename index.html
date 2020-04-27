@@ -1,12 +1,11 @@
 <!--<!DOCTYPE html>-->
 <html lang="en">
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta property="og:title" content="Content titile" />
-  <meta property="og:image" content="image ulr path" />
-  <meta property="og:url" content="https://soundhvish.github.io/prop-vr-soci/" />
-  <meta property="og:description" content="your content"  />
+<meta property="og:url"           content="https://www.your-domain.com/your-page.html" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Your Website Title" />
+  <meta property="og:description"   content="Your description" />
+  <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
 
 
 
@@ -32,17 +31,17 @@
       href="https://cdn.glitch.com/bc403f72-b5d3-43ec-ad72-74f21c0382f6%2Ffavicon.png?v=1585058964135"
       />
       <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-      <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
+     <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
-      <script>
 
-        <?php
-        $title="Content title";
-        $url= "https://soundhvish.github.io/prop-vr-soci/";
-        $image="https://firebasestorage.googleapis.com/v0/b/socio-8c7cf.appspot.com/o/images%2Fphoto-1552288092-76e7d732366c.jpg?alt=media&token=f8b6c6fb-b2cd-4f29-b56a-9d8c26d31f7b";
-        ?>
-      </script>
+
 
       <!-- Your share button code -->
 
@@ -325,7 +324,10 @@
         </div>
       </div>
 
-      <div class="fb-share-button" data-href="https://soundhvish.github.io/prop-vr-soci/" data-layout="button_count" data-size="small"><a onClick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=<?php echo $title;?>&amp;p[url]=<?php echo $url; ?>&amp;p[images][0]=<?php echo $image;?>','sharer','toolbar=0,status=0,width=550,height=300');" href="javascript: void(0)">Share</a></div>
+      <div class="fb-share-button" 
+    data-href="https://www.your-domain.com/your-page.html" 
+    data-layout="button_count">
+  </div>
     <!-- Footer
       ================================================= -->
       <footer id="footer">
