@@ -29,18 +29,12 @@
       href="https://cdn.glitch.com/bc403f72-b5d3-43ec-ad72-74f21c0382f6%2Ffavicon.png?v=1585058964135"
     />
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
+    <script>
       <?php
 $title=urlencode('Content title');
 $url= urlencode(document.url);
 $summary=urlencode("Content you can dynamically display like:");
-$image=urlencode("https://firebasestorage.googleapis.com/v0/b/socio-8c7cf.appspot.com/o/images%2Fphoto-1552288092-76e7d732366c.jpg?alt=media&token=f8b6c6fb-b2cd-4f29-b56a-9d8c26d31f7b");
+$image=urlencode('https://firebasestorage.googleapis.com/v0/b/socio-8c7cf.appspot.com/o/images%2Fphoto-1552288092-76e7d732366c.jpg?alt=media&token=f8b6c6fb-b2cd-4f29-b56a-9d8c26d31f7b');
 ?>
     </script>
 
