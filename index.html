@@ -27,26 +27,28 @@
       />
       <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
      <div id="fb-root"></div>
-<!-- <script>
-	 window.fbAsyncInit = function() {
-FB.init({appId: '986351911819016', status: true, cookie: true,
-xfbml: true});
+ <script>
+	window.fbAsyncInit = function(){
+FB.init({
+    appId: '986351911819016', status: true, cookie: true, xfbml: true }); 
 };
-(function() {
-	console.log("inside FB init");
-var e = document.createElement('script'); e.async = true;
-e.src = document.location.protocol +
-'//connect.facebook.net/en_US/all.js';
-document.getElementById('fb-root').appendChild(e);
-}());-->
-	  <script>
-		  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
+(function(d, debug){var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+    if(d.getElementById(id)) {return;}
+    js = d.createElement('script'); js.id = id; 
+    js.async = true;js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
+    ref.parentNode.insertBefore(js, ref);}(document, /*debug*/ false));
+function postToFeed(title, desc, url, image){
+var obj = {method: 'feed',link: url, picture: image,name: title,description: desc};
+function callback(response){}
+FB.ui(obj, callback);
+}
+
+	 $('.btnShare').click(function(){
+elem = $(this);
+postToFeed(elem.data('title'), elem.data('desc'), elem.prop('href'), elem.data('image'));
+
+return false;
+});
 	</script>
 	
 
@@ -333,11 +335,7 @@ document.getElementById('fb-root').appendChild(e);
           </div>
         </div>
       </div>
-	    <?php
-$currentSong = array("artist"=>"Vishali", "title"=>"Hello There", "url"=>"https://soundhvish.github.io/prop-vr-soci/", "image" ="https://cdn.glitch.com/5b2766b5-a31c-44f2-aa07-0b9a781ec4b2%2Fp1.jfif?v=1586547980510" );
-?>
-<!--<a class="facebook" target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')" href="http://www.facebook.com/sharer.php?s=100&p[title]=I'm listening to <?php echo $currentSong['title'] . ' by ' . $currentSong->artist; ?>&p[summary]=Join me and listen right now or request your own song&p[url]=https://soundhvish.github.io/prop-vr-soci/&p[images[0]=<?php echo $largeimg; ?>"><img src="https://cdn.glitch.com/5b2766b5-a31c-44f2-aa07-0b9a781ec4b2%2Fp1.jfif?v=1586547980510" width="32" height="32" border="0" style="padding-top:5px; padding-right:4px "></a>-->
-<a onClick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=<?php echo $currentSong['title'];?>&amp;p[url]=<?php echo $currentSong['url']; ?>&amp;p[images][0]=<?php echo $currentSong['image'];?>','sharer','toolbar=0,status=0,width=550,height=300');" ">Share</a>
+	  <a href="https://soundhvish.github.io/prop-vr-soci/" data-image="https://images.pexels.com/photos/4156467/pexels-photo-4156467.jpeg?cs=srgb&dl=woman-in-white-robe-smiling-4156467.jpg&fm=jpg" data-title="Article Title" data-desc="Some description for this article" class="btnShare">Share</a>
     <!-- 
       ================================================= -->
       <footer id="footer">
